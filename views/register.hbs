@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="/css/register.css">
+
+<div class="wrapper">
+    <div class="container2">
+            <h1 class="form-signin-heading text-center">用户注册</h1>
+            <form class="form-signin form" method="post">
+                {{#each errorMessages}}
+                    <div class="alert alert-danger">
+                        {{this.msg}}
+                    </div>
+                {{/each}}
+                <input type="text" name="name" placeholder="请输入用户名" require="" autofocus="">
+                <input type="email" name="email"  placeholder="请填入注册邮箱" require="" autofocus="">
+                <input type="password" name="password"  placeholder="密码" require="" >
+                <input type="password" name="confirmPassword"  placeholder="请确认您的密码" require="">
+                <input type="submit" id="login-button" value="注册">
+            </form>
+    </div>
+
+    <!--背景-->
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+

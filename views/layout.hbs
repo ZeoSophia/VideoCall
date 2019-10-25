@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+
+      <!--css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/theme/monokai.min.css">
+      <!---->
+
+      <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css"  href="/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <link rel="stylesheet" type="text/css" href="/css/nivo-lightbox/nivo-lightbox.css">
+      <link rel="stylesheet" type="text/css" href="/css/nivo-lightbox/default.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+      <link rel='stylesheet' href='/public/stylesheets/bootstrap.css'/>
+      <link rel='stylesheet' href='/public/stylesheets/bootstrap-theme.css'/>
+
+
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page-scroll" href="/" >Code4Share</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/about" class="page-scroll">关于</a></li>
+                  <li><a href="/contact" class="page-scroll">联系我们</a></li>
+
+            {{#if user}}
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    role = "button" aria-haspopup="true" aria-expanded="false">
+                        {{user.name}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/logout">注销账号</a></li>
+                    </ul>
+                </li>
+
+            {{else}}
+                    <li><a href="/login" class="page-scroll">登录</a></li>
+                    <li><a href="/register" class="page-scroll">注册</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+  </nav>
+<div>
+    {{{body}}}
+</div>
+
+
+  <!-- Footer-->
+  <div id="footer">
+      <div class="container text-center">
+          <p>&copy; 2019 Code4Share__ 基于Node.js和MongoDB的轻量级协同Web应用</p>
+      </div>
+  </div>
+  </body>
+  <script src="/javascripts/jquery-1.11.3.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js"></script>
+</html>
