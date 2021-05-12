@@ -19,7 +19,7 @@
     "express-validator": "^3.1.2",
     "mongoose": "~4.8.6",
     "node-uuid": ">= 1.4.1",
-    "nodemailer": "~3.1.5",
+    "nodemailer": "~6.4.16",
     "ot": "~0.0.15",
     "passport": "~0.3.2",
     "passport-local": "~1.0.0",
